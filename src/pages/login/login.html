@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-title>EDUCATION</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form class="login-form" (ngSubmit)="submit(f)" #f="ngForm">
+     <ion-item>
+       <ion-label floating>Username</ion-label>
+       <ion-input type="text" name="username" ngModel required></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label floating>Password</ion-label>
+       <ion-input type="password" name="password" ngModel required></ion-input>
+     </ion-item>
+     <div text-center class="submit-btn">
+        <button ion-button [disabled]="!f.valid">Submit</button>
+     </div>     
+  </form>
+    <p *ngIf="!isAuthenticated" class="error" text-center>Invalid Username or Password!</p>
+</ion-content>

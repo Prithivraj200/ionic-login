@@ -1,0 +1,13 @@
+page-login {
+   .login-form{
+       margin-top: 30%;
+   }
+
+   .submit-btn{
+       margin-top: 3%;
+   }
+
+   .error{
+       color: map-get($colors,danger);
+   }
+}
